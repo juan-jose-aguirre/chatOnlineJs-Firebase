@@ -131,11 +131,12 @@ onAuthStateChanged(auth, (user) => {
 });
 
 function contenidoChat(user) {
-  mensajes.innerHTML = "";
-  const q = query(collection(db, "chat"),orderBy("date"));
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
-    const messages = [];
+    console.log("Limpio");
+    const q = query(collection(db, "chat"),orderBy("date"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      mensajes.innerHTML = "";
     querySnapshot.forEach((doc) => {
+        console.log("Pinto "+doc);
       if (doc.data().uid === user.uid) {
         mensajes.innerHTML += `
             <div class="d-flex justify-content-end p-1">

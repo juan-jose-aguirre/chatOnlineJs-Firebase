@@ -14,12 +14,12 @@
     />
     <title>Chat Online</title>
   </head>
-  <body>
-    <div class="container bg-dark">
+  <body class="bg-dark ">
+    <div class="container mt-3" style="height: 60vh;">
       <nav class="navbar navbar-dark">
-        <a href="#" class="navbar-brand fw-bold border border-white p-2">Chat Online</a>
+        <a href="#" class="navbar-brand fw-bold border border-white p-2 rounded">Chat Online</a>
         <div>
-          <button id="btnCloseSession" class="btn btn-outline-danger d-none">Cerrar sesion</button>
+          <button id="btnCloseSession" class="btn btn-danger d-none">Cerrar sesion</button>
         </div>
       </nav>
       <div id="spinner" class="d-flex justify-content-center text-light d-none">
@@ -31,7 +31,7 @@
         ERROR, ingrese datos validos
       </div>
       <form id="formLogin" class="mt-5">
-        <legend class="text-white">Formulario de ingreso</legend>
+        <legend class="text-white"><span class="border-bottom border-white">Formulario de ingreso</span></legend>
         <div>
           <label for="correo" class="form-label text-white">Correo:</label>
           <input type="email" class="form-control" id="correo" placeholder="name@example.com" autofocus>
@@ -41,15 +41,15 @@
           <input type="password" class="form-control" id="contrasena" placeholder="*****">
         </div>
         <div class="mt-3 d-flex justify-content-center">
-          <button id="btnLogin" class="btn btn-outline-success">Ingresar</button>
+          <button id="btnLogin" class="btn btn-success">Ingresar</button>
         </div>
         <p class="mt-2">.</p>
       </form>
-      <div id="mensajes" class="text-white bg-secondary rounded d-none" style="height: 50vh; width: 80%; margin: 2vh auto; overflow-y: scroll;">
+      <div id="mensajes" class="text-white bg-secondary rounded d-none" style="height: 62vh; width: 90%; margin: 2vh auto; overflow-y: scroll;">
         
       </div>
       <form id="formChat" class="input-group bg-dark pb-3 container d-none">
-        <input type="text" class="form-control ms-1" placeholder="Enviar mensaje" autofocus>
+        <input type="text" class="form-control ms-1 rounded" placeholder="Enviar mensaje" autofocus>
         <div class="input-group-append">
           <button type="submit" class="btn btn-success">></button>
         </div>
